@@ -1,3 +1,3 @@
 const { html } = require('@popeindustries/lit-html-server');
 
-module.exports = () => html``;
+module.exports = () => html`CIAvvO`;

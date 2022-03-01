@@ -16,10 +16,10 @@ module.exports = (pages, currentItem) => {
         ${Object.keys(navGroups).map((item) => html`
             ${navGroups[item] && navGroups[item].length > 0 ? html`
                 <details ?open=${item === currentItem.type}>
-                    <summary>${item}</summary>
+                    <summary class="text-white">${item}</summary>
                     <ul>
                     ${navGroups[item] && navGroups[item].map((subitem) => html`
-                        <ol class="${subitem.name === currentItem.name && subitem.type === currentItem.type ? 'selected' : nothing}">
+                        <ol class="text-white ${subitem.name === currentItem.name && subitem.type === currentItem.type ? 'selected' : nothing}">
                             <a href="../${item}/${subitem.name}.html" class="link" title="${subitem.name}">${subitem.name}</a>
                         </ol>
                     `)}
